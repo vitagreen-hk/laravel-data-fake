@@ -3,10 +3,10 @@
 namespace JoeSzeto\LaravelDataFake\traits;
 
 use Exception;
-use Jokersk\datafake\src\Contracts\Fakeable;
-use Jokersk\datafake\src\Contracts\FakeAttribute;
-use Jokersk\datafake\src\Enums\AcceptedType;
-use Jokersk\datafake\src\Resolvers\ResolveFromEnum;
+use JoeSzeto\LaravelDataFake\Contracts\FakeAttribute;
+use JoeSzeto\LaravelDataFake\Contracts\Fakeable;
+use JoeSzeto\LaravelDataFake\Enums\AcceptedType;
+use JoeSzeto\LaravelDataFake\Resolvers\ResolveFromEnum;
 use Spatie\LaravelData\Support\DataConfig;
 use Spatie\LaravelData\Support\DataProperty;
 
