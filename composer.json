@@ -1,0 +1,16 @@
+{
+    "name": "joe.szeto/laravel-data-fake",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "JoeSzeto\\LaravelDataFake\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Szeto",
+            "email": "jokersk119@gmail.com"
+        }
+    ],
+    "require": {}
+}
