@@ -1,6 +1,6 @@
 <?php
 
-namespace Jokersk\datafake\src\Attributes;
+namespace JoeSzeto\LaravelDataFake\Attributes;
 
 use Attribute;
 use Jokersk\datafake\src\Contracts\FakeAttribute;

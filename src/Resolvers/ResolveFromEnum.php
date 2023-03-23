@@ -1,6 +1,6 @@
 <?php
 
-namespace Jokersk\datafake\src\Resolvers;
+namespace JoeSzeto\LaravelDataFake\Resolvers;
 
 use Spatie\LaravelData\Support\DataProperty;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Jokersk\datafake\src\traits;
+namespace JoeSzeto\LaravelDataFake\traits;
 
 use Exception;
 use Jokersk\datafake\src\Contracts\Fakeable;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Jokersk\datafake\src\Enums;
+namespace JoeSzeto\LaravelDataFake\Enums;
 
 use Exception;
 use Faker\Generator;
