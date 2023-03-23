@@ -6,6 +6,7 @@ use Exception;
 use Jokersk\datafake\src\Contracts\Fakeable;
 use Jokersk\datafake\src\Contracts\FakeAttribute;
 use Jokersk\datafake\src\Enums\AcceptedType;
+use Jokersk\datafake\src\Resolvers\ResolveFromEnum;
 use Spatie\LaravelData\Support\DataConfig;
 use Spatie\LaravelData\Support\DataProperty;
 
@@ -28,7 +29,16 @@ trait WithFake
                 return $payload;
             }
 
-            $payload[$name] = AcceptedType::fromDataTypes($property->type->acceptedTypes)->fake();
+            if ($property->type->dataClass && static::is($property->type->dataClass, Fakeable::class) ) {
+                $payload[$name] = $property->type->dataClass::fake();
+                return $payload;
+            }
+
+            $payload[$name] = ResolveFromEnum::resolve($property);
+
+            if (!$payload[$name]) {
+                $payload[$name] = AcceptedType::fromDataTypes($property->type->acceptedTypes)->fake();
+            }
 
             return $payload;
         }, []);
