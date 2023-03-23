@@ -6,6 +6,7 @@ use Exception;
 use JoeSzeto\LaravelDataFake\Contracts\FakeAttribute;
 use JoeSzeto\LaravelDataFake\Contracts\Fakeable;
 use JoeSzeto\LaravelDataFake\Enums\AcceptedType;
+use JoeSzeto\LaravelDataFake\Resolvers\ResolveDynamic;
 use JoeSzeto\LaravelDataFake\Resolvers\ResolveFromEnum;
 use Spatie\LaravelData\Support\DataConfig;
 use Spatie\LaravelData\Support\DataProperty;
@@ -35,6 +36,10 @@ trait WithFake
             }
 
             $payload[$name] = ResolveFromEnum::resolve($property);
+
+            if (!$payload[$name]) {
+                $payload[$name] = ResolveDynamic::handle($property);
+            }
 
             if (!$payload[$name]) {
                 $payload[$name] = AcceptedType::fromDataTypes($property->type->acceptedTypes)->fake();
