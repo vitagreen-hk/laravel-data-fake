@@ -11,6 +11,18 @@ enum AcceptedType: string
     case int = 'int';
     case string = 'string';
     case fileUpload = UploadedFile::class;
+    case array = 'array';
+
+    public function fake()
+    {
+        $faker = $this->getFaker();
+        return match ($this) {
+            static::int => $faker->randomNumber(1),
+            static::string => $faker->words(3, true),
+            static::array => [],
+            default => null
+        };
+    }
 
     public static function fromDataTypes(array $dataTypes): static
     {
@@ -27,13 +39,4 @@ enum AcceptedType: string
         return app(Generator::class);
     }
 
-    public function fake()
-    {
-        $faker = $this->getFaker();
-        return match ($this) {
-            static::int => $faker->randomNumber(1),
-            static::string => $faker->words(3, true),
-            default => null
-        };
-    }
 }
