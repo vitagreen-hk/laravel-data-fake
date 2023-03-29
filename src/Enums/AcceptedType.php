@@ -12,6 +12,7 @@ enum AcceptedType: string
     case string = 'string';
     case fileUpload = UploadedFile::class;
     case array = 'array';
+    case bool = 'bool';
 
     public function fake()
     {
@@ -19,6 +20,7 @@ enum AcceptedType: string
         return match ($this) {
             static::int => $faker->randomNumber(1),
             static::string => $faker->words(3, true),
+            static::bool => $faker->boolean(),
             static::array => [],
             default => null
         };
