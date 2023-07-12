@@ -5,7 +5,7 @@ use Spatie\LaravelData\Support\DataProperty;
 
 class ResolveDynamic
 {
-    protected array $resolvers;
+    protected array $resolvers = [];
     protected static ?ResolveDynamic $instance = null;
     public static function add(array $arr) {
         static::getInstance()->resolvers = $arr;
