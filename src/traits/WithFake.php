@@ -14,6 +14,10 @@ use Spatie\LaravelData\Support\DataProperty;
 
 trait WithFake
 {
+    public static function fromfake() {
+        return static::from(static::fake());
+    }
+
     public static function fake()
     {
         $dataClass = app(DataConfig::class)->getDataClass(static::class);
