@@ -21,7 +21,7 @@ class ResolveDynamic
 
     public function resolve(DataProperty $property) {
         foreach($this->resolvers as $key => $value) {
-            if ( array_key_exists($key, $property->type->acceptedTypes) ) {
+            if ( array_key_exists($key, $property->type->getAcceptedTypes()) ) {
                 return $value;
             }
         }

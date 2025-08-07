@@ -12,5 +12,8 @@
             "email": "jokersk119@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "spatie/laravel-data": "^4.17",
+        "fakerphp/faker": "^1.24"
+    }
 }

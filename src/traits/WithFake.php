@@ -25,7 +25,7 @@ trait WithFake
         return $dataClass->properties->reduce(function (array $payload, DataProperty $property) {
             $name = $property->outputMappedName ?? $property->name;
 
-            if ($property->type->isDataCollectable) {
+            if ($property->type->kind->isDataCollectable()) {
                 $payload[$name] = static::handleIsDataCollectable($property);
                 return $payload;
             }
@@ -51,7 +51,7 @@ trait WithFake
             }
 
             if (!$payload[$name]) {
-                $payload[$name] = AcceptedType::fromDataTypes($property->type->acceptedTypes)->fake();
+                $payload[$name] = AcceptedType::fromDataTypes($property->type->getAcceptedTypes())->fake();
             }
 
             return $payload;
