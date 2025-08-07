@@ -1,6 +1,6 @@
 <?php
 
-namespace JoeSzeto\LaravelDataFake\Resolvers;
+namespace Vitagreen\LaravelDataFake\Resolvers;
 use Spatie\LaravelData\Support\DataProperty;
 
 class ResolveDynamic

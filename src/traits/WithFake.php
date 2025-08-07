@@ -1,14 +1,14 @@
 <?php
 
-namespace JoeSzeto\LaravelDataFake\traits;
+namespace Vitagreen\LaravelDataFake\traits;
 
 use Exception;
-use JoeSzeto\LaravelDataFake\Contracts\FakeAttribute;
-use JoeSzeto\LaravelDataFake\Contracts\Fakeable;
-use JoeSzeto\LaravelDataFake\Enums\AcceptedType;
-use JoeSzeto\LaravelDataFake\Resolvers\ResolveDynamic;
-use JoeSzeto\LaravelDataFake\Resolvers\ResolveFromAttributes;
-use JoeSzeto\LaravelDataFake\Resolvers\ResolveFromEnum;
+use Vitagreen\LaravelDataFake\Contracts\FakeAttribute;
+use Vitagreen\LaravelDataFake\Contracts\Fakeable;
+use Vitagreen\LaravelDataFake\Enums\AcceptedType;
+use Vitagreen\LaravelDataFake\Resolvers\ResolveDynamic;
+use Vitagreen\LaravelDataFake\Resolvers\ResolveFromAttributes;
+use Vitagreen\LaravelDataFake\Resolvers\ResolveFromEnum;
 use Spatie\LaravelData\Support\DataConfig;
 use Spatie\LaravelData\Support\DataProperty;
 

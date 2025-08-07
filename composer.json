@@ -1,9 +1,9 @@
 {
-    "name": "joe.szeto/laravel-data-fake",
+    "name": "vitagreen-hk/laravel-data-fake",
     "type": "library",
     "autoload": {
         "psr-4": {
-            "JoeSzeto\\LaravelDataFake\\": "src/"
+            "Vitagreen\\LaravelDataFake\\": "src/"
         }
     },
     "authors": [

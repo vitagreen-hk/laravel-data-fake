@@ -1,6 +1,6 @@
 <?php
 
-namespace JoeSzeto\LaravelDataFake\Attributes;
+namespace Vitagreen\LaravelDataFake\Attributes;
 
 use Attribute;
 use Faker\Generator;

@@ -1,6 +1,6 @@
 <?php
 
-namespace JoeSzeto\LaravelDataFake\Contracts;
+namespace Vitagreen\LaravelDataFake\Contracts;
 
 interface Fakeable {
     public static function fake();

@@ -1,9 +1,9 @@
 <?php
 
-namespace JoeSzeto\LaravelDataFake\Attributes;
+namespace Vitagreen\LaravelDataFake\Attributes;
 
 use Attribute;
-use JoeSzeto\LaravelDataFake\Contracts\FakeAttribute;
+use Vitagreen\LaravelDataFake\Contracts\FakeAttribute;
 
 #[Attribute]
 class FakeFactory implements FakeAttribute

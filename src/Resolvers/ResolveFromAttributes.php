@@ -1,6 +1,6 @@
 <?php
 
-namespace JoeSzeto\LaravelDataFake\Resolvers;
+namespace Vitagreen\LaravelDataFake\Resolvers;
 
 use Faker\Generator;
 use Spatie\LaravelData\Attributes\Validation\Email;
